@@ -1,10 +1,27 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <Header />
   <router-view/>
 </template>
+
+<script>
+import Header from './components/Header.vue'
+
+export default {
+  components: { Header },
+  setup() {
+    window.addEventListener("scroll",function() {
+      const header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0)
+    });
+
+    // const navigation = document.querySelector('nav');
+    // document.querySelector('.toggle').onclick = function() {
+    //   this.classList.toggle('active');
+    //   navigation.classList.toggle('active');
+    // }
+  }
+}
+</script>
 
 <style>
 #app {
@@ -13,18 +30,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  background: url(./assets/sugar-skull.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 </style>
