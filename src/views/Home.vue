@@ -29,7 +29,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 600px;
     flex-direction: column;
     padding: 30px;
     background: #333;

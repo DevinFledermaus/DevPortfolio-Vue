@@ -2,9 +2,8 @@
   <footer>
       <h3>made by devin fledermaus with love</h3>
       <div class="social-icons">
-          <a href="#">blah</a>
-          <a href="#">waah</a>
-          <a href="#">haha</a>
+          <a href="https://github.com/Koumori97" target="_blank">Github</a>
+          <a href="https://www.linkedin.com/in/devin-fledermaus-23a091221/" target="_blank">Linkedin</a>
       </div>
   </footer>
 </template>
